@@ -41,8 +41,6 @@ public class PostagemController {
 		return postagemRepository.findById(id)
 				.map(resposta -> ResponseEntity.ok(resposta))
 				.orElse(ResponseEntity.notFound().build());
-		
-		// select * from tb_postagens where id = id
 	}
 	
 	@GetMapping("/titulo/{titulo}")
